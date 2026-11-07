@@ -5,16 +5,7 @@
   max-height: 200px;
   margin: 0 auto;
 }
-  
-
-@media (min-width: 801px) {
-  .hero {
-    grid-template-columns: 40% 60%;
-    min-height: 700px;
-  }
-}
-
-@media (min-width: 801px) {
+  @media (min-width: 801px) {
   .hero {
     grid-template-columns: 40% 60%;
     min-height: 700px;
