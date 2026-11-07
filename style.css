@@ -130,3 +130,90 @@
     text-wrap: balance;
   }
 }
+
+Loading older messages…
+but didn't I just do that?
+Yes, you did! Sorry — I can see why that's frustrating. You've already followed the instructions, and I shouldn't keep asking you to repeat them.
+The stylesheet you pasted contains the earlier mobile layout changes, but not the final tagline adjustment. That suggests the latest change may not have been saved or published.
+Let's check rather than paste anything again.
+Open your BOLDER stylesheet on GitHub and scroll to the very bottom.
+If you see /* Fix BOLDER tagline on mobile only */, the change has been saved and we should investigate caching.
+If you don't see it, the change hasn't reached the main branch.
+Either way, don't edit anything else yet. We'll establish what's happened first.
+what is the web address again?
+Here's your BOLDER website:
+Visit BOLDER
+And your editing dashboard:
+Pages CMS — add and edit interviews
+I am entering this web address into my mobile and the tagline still looks the same 
+
+https://dominiqueafacan-ops.github.io
+Ah, I can see the problem! You're entering the wrong web address.
+Your BOLDER website is at:
+https://dominiqueafacan-ops.github.io/bolder-site/
+You're missing /bolder-site/ at the end.
+Try opening this link directly on your phone. To check the latest version, you can also use:
+View refreshed BOLDER homepage
+If the tagline still has “YOU” stranded on its own line, we'll check the mobile styling rather than assume it's a caching issue.
+You shouldn't have to keep editing code to get one small design change working!
+Ah that works - so is that the address I should share with people?
+Yes, exactly! That's the correct address to share with people:
+https://dominiqueafacan-ops.github.io/bolder-site/
+Anyone can visit it, on a phone or computer, without needing a GitHub account.
+One suggestion, though: Before you relaunch BOLDER publicly, I'd recommend buying a shorter, more memorable domain name — something like bolderstories.com or be-bolder.co.uk (subject to availability).
+That would look much more professional, particularly if you're sharing it with journalists, publishers or on social media.
+You could still keep the free GitHub hosting, so the only additional cost would be the domain, typically around £10–£25 per year.
+For now, though, you can absolutely share the existing address.
+User attachment
+the other issue with mobile is shown on this screenshot
+Yes, I can see the problem clearly. The Book section is much too wide for your phone screen. The logo is cut off on the right, the headline extends beyond the screen, and the text is disappearing off the edge.
+This isn't a caching issue — it's a mobile layout problem.
+The good news is that we can fix it without changing how BOLDER looks on desktop.
+Here's the fix
+Open Edit BOLDER's stylesheet.
+Scroll to the very bottom.
+Paste this code beneath the existing CSS.
+/* Fix the BOLDER book section on mobile only */
+@media (max-width: 767px) {
+  .book-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .book-feature > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .book-art {
+    min-height: 260px;
+    padding: 28px 18px;
+    overflow: hidden;
+  }
+
+  .book-art img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .book-art .bookname {
+    font-size: 19px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+  }
+
+  .book-feature h2 {
+    font-size: clamp(34px, 9vw, 48px);
+    line-height: 1.08;
+    overflow-wrap: break-word;
+  }
+
+  .book-feature p {
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+}
