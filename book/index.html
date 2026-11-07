@@ -7,22 +7,21 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <header class="bolder-page-nav">
-  <a class="bolder-nav-brand" href="/bolder-site/">BOLDER</a>
-  <nav aria-label="Main navigation">
-    <a href="/bolder-site/">Home</a>
-    <a href="/bolder-site/people/">The People</a>
-    <a href="/bolder-site/book/index.html">The Book</a>
-    <a href="/bolder-site/about/index.html">About</a>
-  </nav>
-</header>
-<style>
-.bolder-page-nav{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px max(24px,calc((100% - 1100px)/2));border-bottom:1px solid #ddd;font-family:Arial,Helvetica,sans-serif}
-.bolder-nav-brand{font-size:24px;font-weight:900;letter-spacing:-1px;color:#111;text-decoration:none}
-.bolder-page-nav nav{display:flex;gap:24px;flex-wrap:wrap}
-.bolder-page-nav nav a{color:#111;text-decoration:none;font-size:14px;font-weight:600}
-@media(max-width:600px){.bolder-page-nav{flex-direction:column;align-items:flex-start}}
-</style>
+  <header class="topbar">
+    <div class="wrap top-inner">
+      <a class="brand" href="/bolder-site/" aria-label="BOLDER homepage">
+        <img src="/bolder-site/assets/BOLDER_logo_letter.jpg" alt="">
+        <span>BOLDER</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/bolder-site/">Home</a>
+        <a href="/bolder-site/people/">People</a>
+        <a href="/bolder-site/book/index.html">The book</a>
+        <a href="/bolder-site/about/index.html">About</a>
+      </nav>
+    </div>
+  </header>
+
   <main style="max-width:900px;margin:40px auto;padding:24px;">
     <a href="../">← Back to BOLDER</a>
     <h1>BOLDER</h1>
