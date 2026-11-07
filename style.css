@@ -104,3 +104,16 @@
   }
   img { max-width: 100%; }
 }
+@media (max-width: 767px) {
+  .masthead .micro {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 8px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+    text-align: center;
+    text-wrap: balance;
+  }
+}
