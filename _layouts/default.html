@@ -1,8 +1,35 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title | escape }} — {% endif %}BOLDER</title>
 <meta name="description" content="{{ page.description | default: site.description | escape }}">
-<link rel="stylesheet" href="{{ '/style.css' | relative_url }}"><link rel="icon" href="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}"></head>
-<body><header class="topbar"><div class="wrap top-inner"><a class="brand" href="{{ '/' | relative_url }}" aria-label="BOLDER homepage"><img src="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}" alt=""><span>BOLDER</span></a><nav class="nav" aria-label="Main navigation"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/people/' | relative_url }}">People</a><a href="{{ '/book/' | relative_url }}">The book</a><a href="{{ '/about/' | relative_url }}">About</a></nav></div></header>
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+<link rel="icon" href="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap top-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="BOLDER homepage">
+      <img src="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}" alt="">
+      <span>BOLDER</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/people/' | relative_url }}">People</a>
+      <a href="{{ '/book/index.html' | relative_url }}">The book</a>
+      <a href="{{ '/about/index.html' | relative_url }}">About</a>
+    </nav>
+  </div>
+</header>
 {{ content }}
-<footer class="site-footer"><div class="wrap footer-inner"><img src="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}" alt="BOLDER"><p>BOLDER — How to grow older.<br>Created by Dominique Afacan and Helen Cathcart.</p><p>© BOLDER. An independent editorial archive.</p></div></footer></body></html>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <img src="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}" alt="BOLDER">
+    <p>BOLDER — How to grow older.<br>Created by Dominique Afacan and Helen Cathcart.</p>
+    <p>© BOLDER. An independent editorial archive.</p>
+  </div>
+</footer>
+</body>
+</html>
