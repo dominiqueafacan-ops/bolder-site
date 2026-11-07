@@ -1,0 +1,61 @@
+media:
+  input: assets
+  output: /assets
+  extensions: [jpg, jpeg, png, webp]
+content:
+  - name: people
+    label: Interviews
+    type: collection
+    path: _people
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields: [title, age, published]
+    fields:
+      - name: title
+        label: Name
+        type: string
+        required: true
+      - name: age
+        label: Age at interview
+        type: string
+      - name: image
+        label: Portrait photograph
+        type: image
+      - name: image_alt
+        label: Photograph description
+        type: string
+      - name: summary
+        label: Short teaser
+        type: text
+      - name: intro
+        label: Introduction
+        type: text
+      - name: featured
+        label: Feature on homepage
+        type: boolean
+      - name: published
+        label: Publish interview
+        type: boolean
+      - name: body
+        label: Full interview
+        type: rich-text
+  - name: about
+    label: About BOLDER
+    type: file
+    path: about.md
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
+  - name: book
+    label: The book
+    type: file
+    path: book.md
+    fields:
+      - name: title
+        type: string
+      - name: body
+        type: rich-text
