@@ -1,10 +1,7 @@
 ---
-layout: page
 title: The book
-permalink: /book/
 ---
-
-# Bolder: Life Lessons from People Older and Wiser Than You
+![BOLDER book cover](/bolder-site/assets/bolder-book-cover.jpg)# Bolder: Life Lessons from People Older and Wiser Than You
 
 An inspiring collection of stories and life lessons by Dominique Afacan and Helen Cathcart, published by Hardie Grant in 2019.
 
