@@ -1,0 +1,5 @@
+---
+layout: default
+permalink: /people/
+---
+<main class="wrap"><section class="page-intro"><div class="eyebrow">The BOLDER archive</div><h1 class="page-title">Meet the Bolders.</h1><p class="intro-text">Extraordinary lives and lessons worth sharing, at every age.</p></section><section class="story-grid" style="padding-bottom:110px">{% assign published_people = site.people | where: 'published', true %}{% for person in published_people %}<a class="story-card" href="{{ person.url | relative_url }}"><img src="{{ person.image | relative_url }}" alt="{{ person.image_alt | escape }}"><div class="meta">Read the interview{% if person.age != blank %} / {{ person.age }}{% endif %}</div><h3>{{ person.title | escape }}</h3><p>{{ person.summary | escape }}</p></a>{% endfor %}</section></main>

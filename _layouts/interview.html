@@ -1,0 +1,5 @@
+---
+layout: default
+---
+<main><section class="profile-hero"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><div class="profile-copy"><div class="eyebrow">The BOLDER interviews{% if page.age != blank %} / {{ page.age }}{% endif %}</div><h1>{{ page.title | escape }}</h1><p class="dek"><em>{{ page.intro | escape }}</em></p></div></section>
+<article class="article-body">{{ content }}<p style="margin-top:65px"><a class="backlink" href="{{ '/people/' | relative_url }}">← Back to all people</a></p></article></main>

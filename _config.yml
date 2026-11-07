@@ -1,0 +1,20 @@
+title: BOLDER
+subtitle: How to grow older
+description: Real people. Extraordinary lives. A different way to age.
+url: ""
+baseurl: "/bolder-site"
+markdown: kramdown
+collections:
+  people:
+    output: true
+    permalink: /people/:name/
+defaults:
+  - scope:
+      path: ""
+      type: people
+    values:
+      layout: interview
+exclude:
+  - README.md
+  - README.txt
+  - preview
