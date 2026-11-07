@@ -117,3 +117,16 @@
     text-wrap: balance;
   }
 }
+/* Fix BOLDER tagline on mobile only */
+@media (max-width: 767px) {
+  .masthead .micro {
+    max-width: 340px;
+    margin: 12px auto 0;
+    padding: 0 8px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    line-height: 1.6;
+    text-align: center;
+    text-wrap: balance;
+  }
+}
