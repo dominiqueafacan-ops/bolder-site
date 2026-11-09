@@ -1,3 +1,4 @@
+
 ---
 ---
 <!DOCTYPE html>
@@ -7,7 +8,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Book | BOLDER</title>
   <link rel="stylesheet" href="../style.css">
+
+  <style>
+    main.book-page {
+      max-width: 900px;
+      margin: 85px auto 110px;
+      padding: 0 30px;
+    }
+
+    .book-back {
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 45px;
+      text-decoration: none;
+    }
+
+    .book-title {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(65px, 10vw, 125px);
+      font-weight: 900;
+      letter-spacing: -0.075em;
+      line-height: 0.95;
+      margin: 0 0 20px;
+    }
+
+    .book-subtitle {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(23px, 3vw, 35px);
+      font-weight: 400;
+      line-height: 1.35;
+      margin: 0 0 50px;
+    }
+
+    .book-cover {
+      display: block;
+      width: 100%;
+      max-width: 430px;
+      height: auto;
+      margin: 0 auto 65px;
+    }
+
+    .book-description {
+      max-width: 750px;
+      margin: 0 auto;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .book-description p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(19px, 1.6vw, 23px);
+      font-weight: 400;
+      line-height: 1.82;
+      margin: 0 0 32px;
+      color: #282321;
+    }
+
+    .book-description blockquote {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(27px, 3.5vw, 43px);
+      font-weight: 400;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      border-top: 4px solid #110c0c;
+      border-bottom: 1px solid #110c0c;
+      border-left: 0;
+      padding: 35px 0;
+      margin: 50px 0;
+    }
+
+    .book-description blockquote p {
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+      margin-bottom: 14px;
+    }
+
+    .book-description blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    .book-description a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 600px) {
+      main.book-page {
+        margin-top: 55px;
+        padding: 0 22px;
+      }
+
+      .book-back {
+        margin-bottom: 35px;
+      }
+
+      .book-cover {
+        margin-bottom: 45px;
+      }
+
+      .book-description blockquote {
+        padding: 25px 0;
+        margin: 40px 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <header class="topbar">
@@ -26,26 +136,29 @@
     </div>
   </header>
 
-  <main style="max-width:900px;margin:40px auto;padding:24px;">
+  <main class="book-page">
 
-    <a href="../">← Back to BOLDER</a>
+    <a class="book-back" href="../">← Back to BOLDER</a>
 
-    <h1>BOLDER</h1>
-    <h2>Life Lessons from People Older and Wiser Than You</h2>
+    <h1 class="book-title">BOLDER</h1>
+
+    <h2 class="book-subtitle">
+      Life Lessons from People Older and Wiser Than You
+    </h2>
 
     <img
+      class="book-cover"
       src="../assets/Boldercover.jpg"
-      alt="Bolder book cover"
-      style="width:100%;max-width:480px;height:auto;margin:20px 0;"
+      alt="Bolder: Life Lessons from People Older and Wiser Than You book cover"
     >
 
     {% assign book_page = site.pages | where: "path", "book.md" | first %}
 
-    <div class="book-description" style="line-height:1.7;">
+    <div class="book-description">
       {% if book_page %}
         {{ book_page.content | markdownify }}
       {% else %}
-        <p>Discover Bolder, published by Hardie Grant in 2019.</p>
+        <p>Bolder was published by Hardie Grant in 2019.</p>
       {% endif %}
     </div>
 
