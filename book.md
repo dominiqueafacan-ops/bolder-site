@@ -16,4 +16,4 @@ Bolder was made into a book, published by Hardie Grant in 2019 and featuring bot
 
 "A beautiful book which I am very in love with...So life-affirming and desperately needed in a culture that is so woefully phobic of age.” ― *Dolly Alderton* 
 
-The book was later optioned by Universal. 
+The book was serialised in the *Daily Mail* and was later optioned by Universal. 
