@@ -1,4 +1,5 @@
-
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,6 @@
   <title>The Book | BOLDER</title>
   <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
 
   <header class="topbar">
@@ -31,32 +31,23 @@
     <a href="../">← Back to BOLDER</a>
 
     <h1>BOLDER</h1>
-
     <h2>Life Lessons from People Older and Wiser Than You</h2>
 
     <img
       src="../assets/Boldercover.jpg"
-      alt="Bolder: Life Lessons from People Older and Wiser Than You book cover"
+      alt="Bolder book cover"
       style="width:100%;max-width:480px;height:auto;margin:20px 0;"
     >
 
-    <p>
-      Bolder was made into a book, published by Hardie Grant
-      in 2019 and featuring both new and old Bolder interviews.
-    </p>
+    {% assign book_page = site.pages | where: "path", "book.md" | first %}
 
-    <blockquote style="font-size:1.2em;line-height:1.6;margin:30px 0;padding-left:20px;border-left:3px solid #ccc;">
-      "A beautiful book which I am very in love with...
-      So life-affirming and desperately needed in a culture
-      that is so woefully phobic of age."
-      <br><br>
-      <em>— Dolly Alderton</em>
-    </blockquote>
-
-    <p>
-      The book was serialised in the <em>Daily Mail</em>
-      and was later optioned by Universal.
-    </p>
+    <div class="book-description" style="line-height:1.7;">
+      {% if book_page %}
+        {{ book_page.content | markdownify }}
+      {% else %}
+        <p>Discover Bolder, published by Hardie Grant in 2019.</p>
+      {% endif %}
+    </div>
 
   </main>
 
