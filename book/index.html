@@ -1,6 +1,4 @@
 
----
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +8,7 @@
   <link rel="stylesheet" href="../style.css">
 
   <style>
-    main.book-page {
+    .book-page {
       max-width: 900px;
       margin: 85px auto 110px;
       padding: 0 30px;
@@ -91,13 +89,8 @@
       margin-bottom: 0;
     }
 
-    .book-description a {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
     @media (max-width: 600px) {
-      main.book-page {
+      .book-page {
         margin-top: 55px;
         padding: 0 22px;
       }
@@ -152,17 +145,31 @@
       alt="Bolder: Life Lessons from People Older and Wiser Than You book cover"
     >
 
-    {% assign book_page = site.pages | where: "path", "book.md" | first %}
-
     <div class="book-description">
-      {% if book_page %}
-        {{ book_page.content | markdownify }}
-      {% else %}
-        <p>Bolder was published by Hardie Grant in 2019.</p>
-      {% endif %}
+
+      <p>
+        Bolder was made into a book, published by Hardie Grant
+        in 2019 and featuring both new and old Bolder interviews.
+      </p>
+
+      <blockquote>
+        <p>
+          “A beautiful book which I am very in love with...
+          So life-affirming and desperately needed in a culture
+          that is so woefully phobic of age.”
+        </p>
+        <p><em>— Dolly Alderton</em></p>
+      </blockquote>
+
+      <p>
+        The book was serialised in the <em>Daily Mail</em>
+        and was later optioned by Universal.
+      </p>
+
     </div>
 
   </main>
 
 </body>
 </html>
+
