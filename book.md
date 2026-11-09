@@ -2,11 +2,10 @@
 title: The book
 ---
 ---
-
-## layout: page
-
+layout: page
 title: The book
 permalink: /book/
+---
 
 ![BOLDER book cover](<{{ '/assets/bolder-book-cover.jpg' | relative_url }}>)
 
