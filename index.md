@@ -1,0 +1,246 @@
+
+---
+layout: default
+title: Home
+permalink: /
+---
+
+<style>
+.bolder-secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px;
+}
+
+.bolder-secondary-grid .story-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+@media (max-width: 620px) {
+  .bolder-secondary-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 44px;
+  }
+}
+
+/* Mobile book-section correction */
+@media (max-width: 767px) {
+  .book-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .book-feature > div {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .book-feature .book-art {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    padding: 30px 18px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .book-feature .book-art img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .book-feature .bookname {
+    max-width: 100%;
+    font-size: 19px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .book-feature h2 {
+    max-width: 100%;
+    font-size: clamp(32px, 9vw, 46px);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
+
+  .book-feature p {
+    max-width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .book-feature .pill {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+</style>
+
+{% assign featured = site.people | where: 'published', true | where: 'featured', true | first %}
+
+{% unless featured %}
+  {% assign featured = site.people | where: 'published', true | first %}
+{% endunless %}
+
+<div class="masthead">
+  <div class="wrap">
+    <img
+      src="{{ '/assets/BOLDER_logo_onwhite_cropped.jpg' | relative_url }}"
+      alt="BOLDER — How to grow older">
+    <div class="micro">
+      Life lessons from people older and wiser than you
+    </div>
+  </div>
+</div>
+
+<main>
+
+{% if featured %}
+<section class="hero">
+  <div class="hero-copy">
+
+    <div class="eyebrow">
+      Featured interview
+      {% if featured.age != blank %}
+        / {{ featured.title }}, {{ featured.age }}
+      {% endif %}
+    </div>
+
+    <h1>Never<br>give in.</h1>
+
+    <p>
+      “You win some, you lose some and you fight again.
+      It’s just like life.”
+    </p>
+
+    <a class="pill" href="{{ featured.url | relative_url }}">
+      Meet {{ featured.title | split: ' ' | first }}
+      <span aria-hidden="true">↗</span>
+    </a>
+
+  </div>
+
+  <div class="hero-image">
+    {% if featured.image != blank %}
+    <img
+      src="{{ featured.image | relative_url }}"
+      alt="{{ featured.image_alt | default: featured.title | escape }}">
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section wrap" aria-labelledby="more-stories-title">
+
+  <div class="section-heading">
+    <div>
+      <div class="eyebrow">More lives, more lessons</div>
+      <h2 id="more-stories-title">Meet the Bolders.</h2>
+    </div>
+
+    <a class="small-link" href="{{ '/people/' | relative_url }}">
+      Explore all interviews ↗
+    </a>
+  </div>
+
+  {% assign published_people = site.people | where: 'published', true %}
+
+  <div class="bolder-secondary-grid">
+
+    {% for person in published_people %}
+      {% unless person.url == featured.url %}
+
+      <a class="story-card" href="{{ person.url | relative_url }}">
+
+        {% if person.image != blank %}
+        <img
+          src="{{ person.image | relative_url }}"
+          alt="{{ person.image_alt | default: person.title | escape }}"
+          loading="lazy">
+        {% endif %}
+
+        <div class="meta">
+          {% if person.age != blank %}
+            {{ person.age }} ·
+          {% endif %}
+          Read the interview
+        </div>
+
+        <h3>{{ person.title | escape }}</h3>
+
+        {% if person.summary != blank %}
+          <p>{{ person.summary | escape }}</p>
+        {% endif %}
+
+      </a>
+
+      {% endunless %}
+    {% endfor %}
+
+  </div>
+
+</section>
+
+<section class="quote-strip">
+  <div class="wrap">
+
+    <div class="eyebrow" style="color:#fff;margin-bottom:25px">
+      Words to live by
+    </div>
+
+    <blockquote>
+      “My life motto? Be positive and never give in.”
+    </blockquote>
+
+    <div class="attribution">Muffie Grieve, 82</div>
+
+  </div>
+</section>
+
+<section class="section wrap book-feature">
+
+  <div class="book-art">
+
+    <img
+      src="{{ '/assets/BOLDER_logo_onwhite_cropped.jpg' | relative_url }}"
+      alt="BOLDER wordmark">
+
+    <div class="bookname">
+      Life lessons from people older and wiser than you
+    </div>
+
+  </div>
+
+  <div>
+
+    <div class="eyebrow">Also in print</div>
+
+    <h2>A lifetime of wisdom, in one book.</h2>
+
+    <p>
+      <em>Bolder: Life Lessons from People Older and Wiser Than You</em>
+      brings the BOLDER spirit to the page.
+    </p>
+
+    <a class="pill" href="{{ '/book/' | relative_url }}">
+      Discover the book
+      <span aria-hidden="true">↗</span>
+    </a>
+
+  </div>
+
+</section>
+
+</main>
