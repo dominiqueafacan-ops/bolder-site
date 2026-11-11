@@ -25,4 +25,3 @@ The only time I am really going to notice that I’m old is when there’s nobod
 
 One of the most important life lessons I’ve learned is that there’s no point having regrets. If you have regrets you live in the past and don’t move forward in other ways. My life motto? Never give up. Live life to the best of your ability.
 
-  
