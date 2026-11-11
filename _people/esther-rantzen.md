@@ -1,6 +1,7 @@
 ---
 title: "Esther Rantzen "
 age: "79"
+image: /assets/EstherRantzen-5144.jpeg
 image_alt: "Esther Rantzen "
 summary: Broadcaster and campaigner Esther Rantzen on breaking barriers at the
   BBC, becoming a mother at 37, the loneliness of losing a soulmate and why it's
