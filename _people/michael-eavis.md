@@ -1,5 +1,6 @@
 ---
 title: Michael Eavis
+age: "79"
 image: /assets/GH9A8045MichaelEavis_low.jpeg
 image_alt: Michael Eavis
 summary: Glastonbury founder Michael Eavis on the unlikely beginnings of the
