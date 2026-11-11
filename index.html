@@ -1,6 +1,8 @@
 
 ---
 layout: default
+title: Home
+permalink: /
 ---
 
 <style>
@@ -18,21 +20,23 @@ layout: default
 
   @media (max-width: 620px) {
     .bolder-secondary-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       gap: 44px;
     }
   }
 
-  /* Fix only the homepage book section on mobile */
-
+  /* Mobile book section */
   @media (max-width: 767px) {
-    .book-feature {
+    section.book-feature {
       display: grid;
       grid-template-columns: minmax(0, 1fr);
       gap: 32px;
-      width: auto;
+      width: calc(100% - 40px);
       max-width: 100%;
-      min-width: 0;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 55px 0;
+      box-sizing: border-box;
     }
 
     .book-feature > div {
@@ -43,16 +47,16 @@ layout: default
     .book-feature .book-art {
       width: 100%;
       min-width: 0;
-      max-width: 100%;
-      min-height: 0;
+      min-height: 260px;
       padding: 30px 20px;
       overflow: hidden;
+      box-sizing: border-box;
     }
 
     .book-feature .book-art img {
       display: block;
       width: 100%;
-      max-width: 280px;
+      max-width: 240px;
       height: auto;
       margin: 0 auto;
       object-fit: contain;
@@ -60,20 +64,19 @@ layout: default
 
     .book-feature .bookname {
       max-width: 100%;
-      font-size: 20px;
+      font-size: 19px;
       line-height: 1.4;
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
     }
 
     .book-feature h2 {
-      font-size: clamp(32px, 9vw, 48px);
-      line-height: 1.08;
-      max-width: 100%;
-      overflow-wrap: break-word;
+      font-size: clamp(32px, 9vw, 46px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      overflow-wrap: anywhere;
     }
 
     .book-feature p {
-      max-width: 100%;
       font-size: 18px;
       line-height: 1.6;
       overflow-wrap: break-word;
@@ -82,7 +85,6 @@ layout: default
     .book-feature .pill {
       max-width: 100%;
       white-space: normal;
-      overflow-wrap: anywhere;
     }
   }
 </style>
@@ -97,7 +99,7 @@ layout: default
   <div class="wrap">
     <img
       src="{{ '/assets/BOLDER_logo_onwhite_cropped.jpg' | relative_url }}"
-      alt="BOLDER — How to grow older"
+      alt="BOLDER"
     >
     <div class="micro">
       Life lessons from people older and wiser than you
@@ -111,7 +113,6 @@ layout: default
   <section class="hero">
 
     <div class="hero-copy">
-
       <div class="eyebrow">
         Featured interview
         {% if featured.age != blank %}
@@ -126,18 +127,22 @@ layout: default
         It’s just like life.”
       </p>
 
-      <a class="pill" href="{{ featured.url | relative_url }}">
+      <a
+        class="pill"
+        href="{{ featured.url | relative_url }}"
+      >
         Meet {{ featured.title | split: ' ' | first }}
         <span aria-hidden="true">↗</span>
       </a>
-
     </div>
 
     <div class="hero-image">
+      {% if featured.image != blank %}
       <img
         src="{{ featured.image | relative_url }}"
-        alt="{{ featured.image_alt | escape }}"
+        alt="{{ featured.image_alt | default: featured.title | escape }}"
       >
+      {% endif %}
     </div>
 
   </section>
@@ -149,7 +154,6 @@ layout: default
   >
 
     <div class="section-heading">
-
       <div>
         <div class="eyebrow">
           More lives, more lessons
@@ -166,7 +170,6 @@ layout: default
       >
         Explore all interviews ↗
       </a>
-
     </div>
 
     {% assign published_people = site.people | where: 'published', true %}
@@ -174,7 +177,6 @@ layout: default
     <div class="bolder-secondary-grid">
 
       {% for person in published_people %}
-
         {% unless person.url == featured.url %}
 
         <a
@@ -206,7 +208,6 @@ layout: default
         </a>
 
         {% endunless %}
-
       {% endfor %}
 
     </div>
@@ -214,7 +215,6 @@ layout: default
   </section>
 
   <section class="quote-strip">
-
     <div class="wrap">
 
       <div
@@ -233,13 +233,11 @@ layout: default
       </div>
 
     </div>
-
   </section>
 
   <section class="section wrap book-feature">
 
     <div class="book-art">
-
       <img
         src="{{ '/assets/BOLDER_logo_onwhite_cropped.jpg' | relative_url }}"
         alt="BOLDER wordmark"
@@ -248,11 +246,9 @@ layout: default
       <div class="bookname">
         Life lessons from people older and wiser than you
       </div>
-
     </div>
 
     <div>
-
       <div class="eyebrow">
         Also in print
       </div>
@@ -275,7 +271,6 @@ layout: default
         Discover the book
         <span aria-hidden="true">↗</span>
       </a>
-
     </div>
 
   </section>
