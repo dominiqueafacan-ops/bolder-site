@@ -1,9 +1,5 @@
 
----
-layout: default
-title: Home
-permalink: /
----
+
 
 <style>
 .bolder-secondary-grid {
