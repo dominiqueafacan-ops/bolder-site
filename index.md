@@ -118,7 +118,7 @@
 
     <p>
       “You win some, you lose some and you fight again.
-      It’s just like life.”
+      Tennis is just like life.”
     </p>
 
     <a class="pill" href="{{ featured.url | relative_url }}">
@@ -197,10 +197,10 @@
     </div>
 
     <blockquote>
-      “My life motto? Be positive and never give in.”
+      “My life motto? Don’t wear beige, it might kill you!”
     </blockquote>
 
-    <div class="attribution">Muffie Grieve, 82</div>
+    <div class="attribution">Sue Kreitzman, 74</div>
 
   </div>
 </section>
