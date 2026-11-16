@@ -1,6 +1,7 @@
 ---
 title: Tim Drake
 age: "73"
+image: /assets/GH9A9222TimDrake-1.jpeg
 image_alt: Tim Drake
 summary: After losing his fortune and career in his late forties, Tim Drake
   found himself starting again with two young children to support. Now a
