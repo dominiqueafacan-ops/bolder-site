@@ -5,171 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Book | BOLDER</title>
-  <link rel="stylesheet" href="../style.css">
-
-  <style>
-    .book-page {
-      max-width: 900px;
-      margin: 85px auto 110px;
-      padding: 0 30px;
-    }
-
-    .book-back {
-      display: inline-block;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      margin-bottom: 45px;
-      text-decoration: none;
-    }
-
-    .book-title {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(65px, 10vw, 125px);
-      font-weight: 900;
-      letter-spacing: -0.075em;
-      line-height: 0.95;
-      margin: 0 0 20px;
-    }
-
-    .book-subtitle {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(23px, 3vw, 35px);
-      font-weight: 400;
-      line-height: 1.35;
-      margin: 0 0 50px;
-    }
-
-    .book-cover {
-      display: block;
-      width: 100%;
-      max-width: 430px;
-      height: auto;
-      margin: 0 auto 65px;
-    }
-
-    .book-description {
-      max-width: 750px;
-      margin: 0 auto;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    .book-description p {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(19px, 1.6vw, 23px);
-      font-weight: 400;
-      line-height: 1.82;
-      margin: 0 0 32px;
-      color: #282321;
-    }
-
-    .book-description blockquote {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(27px, 3.5vw, 43px);
-      font-weight: 400;
-      line-height: 1.35;
-      letter-spacing: -0.025em;
-      border-top: 4px solid #110c0c;
-      border-bottom: 1px solid #110c0c;
-      border-left: 0;
-      padding: 35px 0;
-      margin: 50px 0;
-    }
-
-    .book-description blockquote p {
-      font-size: inherit;
-      line-height: inherit;
-      color: inherit;
-      margin-bottom: 14px;
-    }
-
-    .book-description blockquote p:last-child {
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 600px) {
-      .book-page {
-        margin-top: 55px;
-        padding: 0 22px;
-      }
-
-      .book-back {
-        margin-bottom: 35px;
-      }
-
-      .book-cover {
-        margin-bottom: 45px;
-      }
-
-      .book-description blockquote {
-        padding: 25px 0;
-        margin: 40px 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
-
   <header class="topbar">
     <div class="wrap top-inner">
-      <a class="brand" href="/bolder-site/" aria-label="BOLDER homepage">
-        <img src="/bolder-site/assets/BOLDER_logo_letter.jpg" alt="">
+      <a class="brand" href="/" aria-label="BOLDER homepage">
+        <img src="/assets/BOLDER_logo_letter.jpg" alt="">
         <span>BOLDER</span>
       </a>
-
       <nav class="nav" aria-label="Main navigation">
-        <a href="/bolder-site/">Home</a>
-        <a href="/bolder-site/people/">People</a>
-        <a href="/bolder-site/book/index.html">The book</a>
-        <a href="/bolder-site/about/index.html">About</a>
+        <a href="/">Home</a>
+        <a href="/people/">People</a>
+        <a href="/book/">The book</a>
+        <a href="/about/">About</a>
       </nav>
     </div>
   </header>
 
-  <main class="book-page">
-
-    <a class="book-back" href="../">← Back to BOLDER</a>
-
-    <h1 class="book-title">BOLDER</h1>
-
-    <h2 class="book-subtitle">
-      Life Lessons from People Older and Wiser Than You
-    </h2>
-
-    <img
-      class="book-cover"
-      src="../assets/Boldercover.jpg"
-      alt="Bolder: Life Lessons from People Older and Wiser Than You book cover"
-    >
-
-    <div class="book-description">
-
-      <p>
-        Bolder was made into a book, published by Hardie Grant
-        in 2019 and featuring both new and old Bolder interviews.
-      </p>
-
-      <blockquote>
-        <p>
-          “A beautiful book which I am very in love with...
-          So life-affirming and desperately needed in a culture
-          that is so woefully phobic of age.”
-        </p>
-        <p><em>— Dolly Alderton</em></p>
-      </blockquote>
-
-      <p>
-        The book was serialised in the <em>Daily Mail</em>
-        and was later optioned by Universal.
-      </p>
-
-    </div>
-
+  <main style="max-width:900px;margin:40px auto;padding:24px;">
+    <a href="/">← Back to BOLDER</a>
+    <h1>BOLDER</h1>
+    <h2>Life Lessons from People Older and Wiser Than You</h2>
+    <img src="/assets/Boldercover.jpg"
+         alt="The BOLDER book"
+         style="width:100%;max-width:480px;height:auto;">
+    <p>An inspiring collection of stories and life lessons by Dominique Afacan and Helen Cathcart, published by Hardie Grant in 2019.</p>
   </main>
-
 </body>
 </html>
+
 
