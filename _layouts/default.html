@@ -4,34 +4,73 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>{% if page.title %}{{ page.title | escape }} — {% endif %}BOLDER</title>
-<meta name="description" content="{{ page.description | default: site.description | escape }}">
+
+<meta name="description" content="{{ page.description | default: site.description | default: 'Life lessons from people older and wiser than you.' | escape }}">
+
+<!-- LinkedIn, Facebook and other social previews -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BOLDER">
+
+<meta property="og:title" content="{% if page.title %}{{ page.title | escape }} — BOLDER{% else %}BOLDER | Life lessons from people older and wiser than you{% endif %}">
+
+<meta property="og:description" content="{{ page.description | default: 'Extraordinary people over 70 share their wisdom on life, love, happiness and growing older.' | escape }}">
+
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+
+<meta property="og:image" content="{{ '/assets/BOLDER_logo_onwhite_cropped.jpg' | absolute_url }}">
+<meta property="og:image:alt" content="BOLDER — Life lessons from people older and wiser than you">
+
+<!-- Additional social sharing metadata -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }} — BOLDER{% else %}BOLDER | Life lessons from people older and wiser than you{% endif %}">
+<meta name="twitter:description" content="{{ page.description | default: 'Extraordinary people over 70 share their wisdom on life, love, happiness and growing older.' | escape }}">
+<meta name="twitter:image" content="{{ '/assets/BOLDER_logo_onwhite_cropped.jpg' | absolute_url }}">
+
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v=20261107">
 <link rel="icon" href="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}">
+
 </head>
+
 <body>
+
 <header class="topbar">
   <div class="wrap top-inner">
+
     <a class="brand" href="{{ '/' | relative_url }}" aria-label="BOLDER homepage">
       <img src="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}" alt="">
       <span>BOLDER</span>
     </a>
+
     <nav class="nav" aria-label="Main navigation">
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/people/' | relative_url }}">People</a>
       <a href="{{ '/book/' | relative_url }}">The book</a>
       <a href="{{ '/about/' | relative_url }}">About</a>
     </nav>
+
   </div>
 </header>
+
 {{ content }}
+
 <footer class="site-footer">
   <div class="wrap footer-inner">
+
     <img src="{{ '/assets/BOLDER_logo_letter.jpg' | relative_url }}" alt="BOLDER">
-    <p>BOLDER — How to grow older.<br>Created by Dominique Afacan and Helen Cathcart.</p>
+
+    <p>
+      BOLDER — How to grow older.<br>
+      Created by Dominique Afacan and Helen Cathcart.
+    </p>
+
     <p>© BOLDER. An independent editorial archive.</p>
+
   </div>
 </footer>
+
 </body>
 </html>
+
 
